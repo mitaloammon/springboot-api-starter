@@ -10,7 +10,7 @@ This is a simple RESTful API built with Spring Boot that allows you to manage ta
 - Uses in-memory storage (`Map<Integer, List<Task>>`)
 - JSON request/response with automatic serialization via Jackson
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Java 17+
 - Spring Boot
