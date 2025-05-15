@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,6 +48,31 @@ public class ApiController {
     public ResponseEntity<Void> clearTasksForUser(@PathVariable int userId) {
         userTasks.remove(userId);
         return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{taskIndex}")
+    public ResponseEntity<Map<String, Object>> updateTaskForUser(
+        @PathVariable int userId,
+        @PathVariable int taskIndex,
+        @RequestBody Task updatedTask
+    ) 
+    {
+        List<Task> tasks = userTasks.get(userId);
+
+        if (tasks == null || taskIndex < 0 || taskIndex >= tasks.size()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        updatedTask.setUserId(userId);
+        updatedTask.setUserName("Username " + userId);
+
+        tasks.set(taskIndex, updatedTask);
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "Task updated successfully");
+        response.put("task", updatedTask);
+
+        return ResponseEntity.ok(response);
     }
 
 }

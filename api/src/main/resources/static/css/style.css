@@ -1,0 +1,13 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #taskForm {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #taskList li {
+    margin-bottom: 10px;
+  }
+  
