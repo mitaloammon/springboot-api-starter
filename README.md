@@ -2,7 +2,7 @@
 
 This is a simple RESTful API built with Spring Boot that allows you to manage tasks for multiple users. It's ideal as a learning project or a starting point for more advanced back-end applications.
 
-## 🚀 Features
+## Features
 
 - Create tasks associated with a specific user
 - List all tasks for a user
@@ -20,12 +20,12 @@ This is a simple RESTful API built with Spring Boot that allows you to manage ta
 
 ---
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/springboot-rest-api.git
+git clone https://github.com/your-username/springboot-api-starter.git
 cd springboot-rest-api
 ```
 
@@ -42,13 +42,13 @@ cd springboot-rest-api
 ```
 
 The API will be available at:  
-👉 `http://localhost:8080`
+`http://localhost:8080`
 
 ---
 
-## 📘 API Endpoints
+## API Endpoints
 
-### 🔹 Create a Task
+### Create a Task
 
 `POST /users/{userId}/tasks`
 
@@ -66,13 +66,13 @@ The API will be available at:
   "description": "Learn Spring Boot",
   "done": false,
   "userId": 1,
-  "userName": "Usuário 1"
+  "userName": "Mary"
 }
 ```
 
 ---
 
-### 🔹 Get Tasks by User
+### Get Tasks by User
 
 `GET /users/{userId}/tasks`
 
@@ -83,14 +83,14 @@ The API will be available at:
     "description": "Learn Spring Boot",
     "done": false,
     "userId": 1,
-    "userName": "Usuário 1"
+    "userName": "Michael"
   }
 ]
 ```
 
 ---
 
-### 🔹 Delete All Tasks for User
+### Delete All Tasks for User
 
 `DELETE /users/{userId}/tasks`
 
@@ -98,7 +98,7 @@ The API will be available at:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 You can test the API using tools like:
 
@@ -108,12 +108,12 @@ You can test the API using tools like:
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-Developed by [Mitalo Ammon](https://github.com/seu-usuario-aqui)
+Developed by [Mitalo Ammon](https://github.com/mitaloammon)
