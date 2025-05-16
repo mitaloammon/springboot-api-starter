@@ -25,8 +25,8 @@ This is a simple RESTful API built with Spring Boot that allows you to manage ta
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/springboot-api-starter.git
-cd springboot-rest-api
+git clone https://github.com/mitaloammon/springboot-api-starter
+cd api
 ```
 
 2. **Build the project:**
@@ -42,7 +42,7 @@ cd springboot-rest-api
 ```
 
 The API will be available at:  
-`http://localhost:8080`
+`http://localhost:8080/index.html`
 
 ---
 
